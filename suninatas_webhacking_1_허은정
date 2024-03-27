@@ -1,0 +1,70 @@
+<%
+    str = Request("str")
+
+    If not str = "" Then
+        result = Replace(str,"a","aad")
+        result = Replace(result,"i","in")
+        result1 = Mid(result,2,2)
+        result2 = Mid(result,4,6)
+        result = result1 & result2
+        Response.write result
+        If result = "admin" Then
+            pw = "????????"
+        End if
+    End if
+%>
+
+설명 : 
+asp 언어로 이루어져 있음
+asp 언어 - 프로그래밍 언어는 동적으로 처리되는 웹 사이트, 서비스, 프로그램 등을 코딩하는데 사용하는 언어
+
+str - 문자열
+requset("str") - 입력 칸에 입력해 제출한 문자열이 변수 str에 저장
+
+ If not str = "" Then 
+End if
+- 변수 str에 아무 값도 안들어가 있으면 종료된다.
+
+result = Replace(str, "a", "aad")
+- 변수 str의 값 "a"을 "aad"로 바꾸고 변수 result에 저장한다.
+
+
+replace 함수 - replace(변수명, 바뀔 문자열, 바꿀 문자열)
+
+ result = Replace(str, "i", "in")
+- 변수 str의 값 "i"를 "in"로 바꾸고 변수 result에 저장한다.
+
+
+result1 = Mid(result, 2, 2)
+ - 변수 result의 2번째 값부터 2개의 값를 result1에 저장한다.
+
+<Mid 함수>
+Mid(변수명, 시작할 값 지점, 길이)
+
+ result2 = Mid(result, 4, 6)
+- 변수 result의 4번째 값부터 6개의 값을 result2에 저장한다.
+
+ result = result1 & result2 
+- 변수 result1의 값과 result2의 값을 합친다.
+
+Response.write result
+- result 값의 문자열을 화면에 출력한다.
+
+<Response.write>
+Response.write "문자열"
+"문자열"을 화면에 출력합니다.
+
+ If result = "admin" Then
+ pw = "?????" 
+ End if
+ - 변수 result 값이 "admin"이면 pw를 알아낼 수 있다.
+
+result1 값에는 2개의 값만 들어가므로
+result1 = ad
+result2 = min
+
+result = Replace(str,"a","aad")를 사용하려면 ad 앞에 a가 필요
+in -> i로 교체, add -> a로 교체
+result = addmin -> addmi -> ami
+
+Authkey : k09rsogjorejv934u592oi
