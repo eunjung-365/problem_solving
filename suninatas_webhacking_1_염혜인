@@ -1,0 +1,50 @@
+request 값을 받아오는 함수
+
+
+replace 값의 문자를 바꿔주는 함수
+
+	replace(abc, "a", "apple")
+	= abc에서의 a를 apple로 치환하는 것
+
+
+mid 원하는 부분의 값을 가져오는 함수
+
+	mid(abcde, 2, 3)
+	= abcde에서 2번째인 b부터 3개 가져와 출력하는 것이므로 bcd가 출력
+
+& 두 값을 합치는 함수
+
+
+
+<%
+    str = Request("str")
+
+    If not str = "" Then
+        result = Replace(str,"a","aad")
+        result = Replace(result,"i","in")
+        result1 = Mid(result,2,2)
+        result2 = Mid(result,4,6)
+        result = result1 & result2
+        Response.write result
+        If result = "admin" Then
+            pw = "????????"
+        End if
+    End if
+%>
+
+
+위 명령어들을 위 문제에 대입하면
+
+ami
+
+aadmi
+
+aadmin
+
+결과 1은 ad
+
+결과 2는 min으로
+
+결과 1,2를 합친 값이 admin이 되므로 문제가 풀린다
+
+
