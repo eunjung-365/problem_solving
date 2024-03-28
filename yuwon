@@ -1,1 +1,29 @@
-test
+<%
+    str = Request("str") 
+    -> str을 입력 받음
+    If not str = "" Then
+        result = Replace(str,"a","aad")
+        -> result에 있는 문자 "a"를 "aad"로 대체
+        result = Replace(result,"i","in")
+        -> result에 있는 문자 "i"를 "in"로 대체
+        result1 = Mid(result,2,2)
+        -> result에 있는 두 번째 문자부터 길이 2만큼 cut해서 result1에 저장
+        result2 = Mid(result,4,6)
+        -> result에 있는 네 번째 문자부터 길이 6만큼 cut해서 result2에 저장
+        result = result1 & result2
+        -> result1 뒤에 result2를 붙여서 result에 저장'
+        Response.write result
+        -> result를 보여줌
+        If result = "admin" Then
+        -> result가 admin이면
+            pw = "????????"
+            -> pw를 알려줌
+        End if
+    End if
+%>
+
+result에 뭘 써야하는가?
+result1에는 ad가 저장되어야하고
+result2에는 min이 저장되어야한다.
+이렇게 되려면 cut하기 직전의 result 문자열에는 aadmin이 저장되어야 한다.
+그럼 입력할 때는 ami만 쓰면 된다.
