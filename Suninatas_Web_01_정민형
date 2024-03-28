@@ -1,0 +1,63 @@
+0327
+
+ ＃Suninatas Web - 1 원본 코드
+
+<%
+    str = Request("str")
+
+    If not str = "" Then
+        result = Replace(str,"a","aad")
+        result = Replace(result,"i","in")
+        result1 = Mid(result,2,2)
+        result2 = Mid(result,4,6)
+        result = result1 & result2
+        Response.write result
+        If result = "admin" Then
+            pw = "????????"
+        End if
+    End if
+%>
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+＃사용 엔진: ASP(Active Server Pages)
+＃엔진 특징
+Microsoft에서 개발한 서버 스크립트 환경. **동적** 웹페이지 생성 (Window에 최적화)
+VBScript 또는 JScript등의 스크립트 언어로 주로 작성됨. (외 다양한 언어 지원)
+기본 코드 형태 : < % Code % >
+
+＃사용된 문법
+- Request(“변수명”) : 사용자가 제출한 데이터를 추출.
+- Replace(변수명, “변수 내 지정 문자열”, “치환할 문자열”) : 변수 내의 특정 문자열을 지정된 다른 값으로 치환.
+- Mid(변수명, n(시작 위치), m(추출할 문자 개수))  : 변수 내의 n(시작 위치)부터 m개의 문자를 추출.
+- 변수1 & 변수2  : 연결 연산자 &. 변수1의 값과 변수2의 문자열을 순서대로 연결. 
+                  이 때, str타입이 아닌 변수는 str타입으로 치환 후 연결시킨다. (실제 데이터 타입은 변화 X.)
+- Response.write 변수 : 출력 함수. 변수의 내용을 출력한다.
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ ＃코드 주석
+<%
+    str = Request("str")			' 사용자로부터 입력 요청. str 변수에 저장.
+
+    If not str = "" Then			' str이 비어있지 않다면(조건문1 시작)
+        result = Replace(str,"a","aad")	        ' str내 a 문자열을 aad로 치환해 result에 저장
+        result = Replace(result,"i","in")	' result내 i 문자열을 in으로 치환해 result에 저장
+        result1 = Mid(result,2,2)		' result 내의 2번째부터 2개의 문자를 추출해 result1에 저장
+        result2 = Mid(result,4,6)		' result 내의 4번째부터 6개의 문자를 추출해 result2에 저장
+        result = result1 & result2		' result1과 result2를 순서대로 연결해  result에 저장
+        Response.write result		        ' result 출력
+        If result = "admin" Then		' result의 값이 admin이라면 (조건문2 시작)
+            pw = "????????"		        ' pw의 값을 알아낼 수 있다
+        End if				        ' 조건문 2 종료
+    End if				        ' 조건문 1 종료
+%>
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+ ＃정답 해설
+ami 입력
+→ a는 add로, i는 in으로 치환 → result = aadmin 
+→ result의 두 번째 문자열부터 2개의 문자(ad)를 result1에 저장 
+→ result의 네 번째 문자열부터 6개의 문자(min)을 result2에 저장
+→ result1 + result2 → admin 완성!
