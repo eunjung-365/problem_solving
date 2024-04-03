@@ -1,0 +1,85 @@
+0403
+
+＃Suninatas Web - 2 (f12를 눌러 Sources 확인 시)
+
+<!-- html 부분 中 -->
+           <tr height="30">
+                <td colspan="2" align="center" class="table_top">
+                    <input type="button" value="Join" style="width: 60" onclick="chk_form()">
+            </tr>
+<!-- 이하 html code 부분 생략 -->
+
+<!-- Java Script -->
+<script>
+	function chk_form(){
+		var id = document.web02.id.value ;
+		var pw = document.web02.pw.value ;
+		if ( id == pw )
+		{
+			alert("You can't join! Try again");
+			document.web02.id.focus();
+			document.web02.id.value = "";
+			document.web02.pw.value = "";
+		}
+		else
+		{
+			document.web02.submit();
+		}
+	}
+</script>
+<!-- Hint : Join / id = pw -->
+<!-- M@de by 2theT0P -->
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+＃사용언어: HTML,  JavaScript
+기본 코드 형태 : <tag> Code </tag>
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+＃코드 주석
+
+ <!-- html 부분 中 -->
+           <tr height="30">
+                <td colspan="2" align="center" class="table_top">
+                    <!-- Join 버튼을 누르면 chk_form() 함수 동작 -->
+                    <input type="button" value="Join" style="width: 60" onclick="chk_form()">
+            </tr>
+<!-- 이하 html code 부분 생략 -->
+
+<!-- JavaScript -->
+<script>
+	function chk_form(){
+		var id = document.web02.id.value ;		<!-- 입력받은 ID 값을 id 변수에 -->
+		var pw = document.web02.pw.value ;		<!-- 입력받은 PW 값을 pw 변수에 -->
+
+		<!-- 만약 id와 pw가 동일하다면 -->
+		if ( id == pw )
+		{
+			alert("You can't join! Try again");	<!-- 팝업 메시지 -->
+			document.web02.id.focus();		      <!-- 커서를 id란에 포커싱 -->
+			document.web02.id.value = "";	      <!-- id 입력값을 비움 -->
+			document.web02.pw.value = "";	      <!-- pw 입력값을 비움 -->
+		}
+		else
+		{
+			document.web02.submit();		        <!-- form 데이터 서버 제출 -->
+		}
+	}
+</script>
+<!-- Hint : Join / id = pw -->
+<!-- M@de by 2theT0P -->
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+＃풀이
+
+f12를 눌러 개발자 도구를 펼친다. Sources 확인. Hint의 id = pw
+힌트대로 같은 값을 입력 후 Join을 하면 You can't join! Try again 이라는 팝업 메시지와 함께 입력값이 초기화.
+
+개발자 도구의 Console 기능 이용.
+else내에 있는 form 데이터 제출 함수(document.web02.submit();)를 실행시키는 방식으로 해결한다.
+ID와 PW에 같은 값을 입력 후 Console에 document.web02.submit(); 작성 후에 Enter
+Authkey 획득!
+
+이외 다른 방법이 여럿 있는 것으로 보임…….
