@@ -1,0 +1,55 @@
+#전체코드
+</body>
+</html>
+<script>
+	function chk_form(){
+		var id = document.web02.id.value ;
+		var pw = document.web02.pw.value ;
+		if ( id == pw )
+		{
+			alert("You can't join! Try again");
+			document.web02.id.focus();
+			document.web02.id.value = "";
+			document.web02.pw.value = "";
+		}
+		else
+		{
+			document.web02.submit();
+		}
+	}
+</script>
+<!-- Hint : Join / id = pw -->
+<!-- M@de by 2theT0P -->
+
+
+
+---------------------------------------------------------------------------------------------------------
+#주석 및 풀이
+
+function chk_form(){
+		var id = document.web02.id.value ;
+		var pw = document.web02.pw.value ;
+		if ( id == pw )                            // 만약 id와 pw가 같으면 
+		{
+			alert("You can't join! Try again");      // "You can't join! Try again"를 출력
+			document.web02.id.focus();
+			document.web02.id.value = "";
+			document.web02.pw.value = "";
+		}
+		else                                       // 아니라면 
+		{
+			document.web02.submit();                 // 
+		}
+
+
+
+<!-- Hint : Join / id = pw -->                 // 힌트: id = pw 
+<!-- M@de by 2theT0P -->
+
+                      
+
+처음 if에서 만약 id와 pw가 같으면 "You can't join! Try again"를 출력을 하므로 pw와 id는 답이 같지 않음을 알 수 있다. 
+그런데 Hint에서는 id와 pw가 같다고 하였으므로 모순이 생긴다.
+else를 통해 if가 아니라면 docomet.web02.submit() 이다.
+
+여기까지 해석 하였지만 이 후로는 어떻게 해결해야 할지는 잘 모르겠다...
