@@ -1,0 +1,30 @@
+// 콘솔은 입력장치와 출력장치를 총칭하는 말
+// 콘솔창 : 명령 프롬프트 창
+// 콘솔 프로그램 : 콘솔 창을 기반으로 작동하는 프로그램
+// Windows 에서는 명령프롬프르. Linux 에서는 쉘
+// 웹브라우저에 들어가서 F12 버튼을 누르면 콘솔창이 열린다
+
+function chk_fomr(){
+  var id = document.web02.id.value;
+  var pw = document.web02.pw.wavlue;
+  if(id == pw)
+  {
+    alert("You can't join! Try again");
+    document. web02. id.focus();
+    document. web02.id.value = "";
+    document. web02.pw.value = "";
+  }
+  else
+  {
+    document.web02.submit();
+  }
+}
+
+// [해석]
+// id 와 pw 가 같으면 alert 문구가 뜨며 id와 pw 값이 초기화된다
+// else : id 와 pw 값이 다를 경우
+// document.web02.submit(); : 입력한 id값과 pw 값 제출
+
+// 다른 값을 입력하면 아무런 반응이 없음
+// 같은 ID와 PW를 입력한 후
+// 콘솔창에 document.web02.submit(); 를 입력하고 submit 하면 Authkey 完
