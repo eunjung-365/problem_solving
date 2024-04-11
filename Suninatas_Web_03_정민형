@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Game 03</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/static/img/game.ico" />
+</head>
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table width="1000" cellpadding="0" cellspacing="0">
+                    <tr height="20">
+                        <td width="100%" bgcolor="000000" align="right">
+                            <input type="button" name="main_btn" value="main" class="btn_check" style="width: 60" onclick="location.href = '/'">&nbsp<input type="button" name="main_btn" value="Back" class="btn_check" style="width: 60" onclick="history.back()"></td>
+                    </tr>
+                    <tr height="500">
+                        <td bgcolor="000000" style="line-height: 15" align="center"><font color="white" size="10"><b>Write articles in Notice Board!</b></font></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+<!--M@de by 2theT0P-->
+
+———————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+f12를 눌러 나오는 소스 코드 내에서는 얻을 수 있는 단서가 없었다.
+단순히 게시판에 글을 쓰는 것으로 해결될 문제는 아닌 것으로 보였으나, 별 다른 단서가 없으니 써니나타스의 게시판에 가서 test용 비밀글을 작성해보았다. 
+아무런 일도 일어나지 않았다.
+
+“Write articles in Notice Board!”
+화면 내에 떠있는 글자를 다시 보니, Notice Board가 눈에 띈다. Notice 게시판에 들어가보아도 작성 버튼이 없어 페이지를 헤매이다 문득 주소를 보았다.
+
+free board의 주소 - http://suninatas.com/board/free 
+notice board의 주소 - http://suninatas.com/board/notice 
+
+테스트로 작성한 free borad의 내 게시글 번호는 4587이었고, 써니나타스의 notice board 최상단 공지 게시글의 번호는 4446이다. 각 주소는 다음과 같다.
+
+http://suninatas.com/board/view/4587
+http://suninatas.com/board/view/4446 
+
+가장 뒤에 있는 숫자가 게시글의 번호인 것으로 추정된다. 해당 번호를 게시글의 번호로 바꾸니 각 게시글 페이지로 이동할 수 있었다.
+
+이에 다시 free board의 게시글 작성 페이지로 들어가보았다.
+http://suninatas.com/board/free/write 
+위 주소에서 free → notice로 바꾸어보니, 상단 초록색 바에 적힌 대제목이 NOTICE WRITE로 바뀐 것을 볼 수 있다.
+Title, Content를 채운 뒤 submit을 누르면 auth key를 얻을 수 있다.
