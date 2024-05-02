@@ -1,0 +1,58 @@
+＃Suninatas Web - 4
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Game 04</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/static/img/game.ico" />
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="post" name="test" action="./web04_ck.asp">
+        <table width="240" cellpadding="0" cellspacing="0" align="center">
+            <tr height="30">
+                <td colspan="2" width="100%" class="table_top" align="right">
+                    <input type="button" name="main_btn" value="main" style="width: 60" onclick="location.href = '/'">&nbsp<input type="button" name="main_btn" value="Back" style="width: 60" onclick="history.back()"></td>
+            </tr>
+            <tr height="30" class="table_main">
+                <td width="120" align="center" bgcolor="cccccc"><font size="2"><b>Point</b></font></td>
+                <td width="120" align="center" bgcolor="cccccc">
+                    <input type="text" name="total" value="0" size="16"></td>
+            </tr>
+            <tr height="30">
+                <td colspan="2" align="center" class="table_top" bgcolor="cccccc">
+                    <input type="button" name="plus_btn" value="Plus" class="btn_check" style="width: 70" onclick="submit()">
+            </tr>
+        </table>
+        <br>
+        <br>
+        <table width="1000" cellpadding="0" cellspacing="0" align="center">
+            <tr height="30">
+                <td class="table_top"><font size="2"><b>User-Agent</b></font></td>
+                <td class="table_top">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</td>
+            </tr>
+            <tr height="30">
+                <td class="table_top"><font size="2"><b>Auth key</b></font></td>
+                <td class="table_top">?????</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<!-- Hint : Make your point to 50 & 'SuNiNaTaS' -->
+<!-- M@de by 2theT0P -->
+
+
+풀이- 힌트를 보면 점수를 50점으로 만들라고 나온다. 하지만 25점에서 더 이상 점수가 올라가지 않음을 확인 할 수 있다. 
+     25점 에서 plus 버튼을 누르면 I like SuNiNaTaS 브라우저 라고 뜬다. 크롬에서 f12버튼을 눌러서 이것저것 확인해 보면 
+     브라우저 설정을 변경할 수 있는 페이지가 있다. 보통 Chrome windows 가 기본 셋팅으로 돼 있을 텐데 사용자 설정값으로 바꾼뒤
+     브라우저 이름에 SuNiNaTaS 를 친다. 저장을 한 후 plus 버튼을 눌러보면 점수가 올라가는 것을 확인 할 수 있다. 
+     점수를 50 점까지 올리면 KEY값이 보이게 된다 야호!
