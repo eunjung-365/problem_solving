@@ -1,0 +1,48 @@
+<%
+    str = Request("str")
+
+    If not str = "" Then
+        result = Replace(str,"a","aad") 
+        #admin -> aaddmin
+        result = Replace(result,"i","in")
+        #aaddmin -> aaddminn
+        result1 = Mid(result,2,2)
+        #result 1 = ad
+        #????? => 2번째 index부터 반환해야 하는 거 아닌가?
+        result2 = Mid(result,4,6)
+        #result 2 = dmi
+        result = result1 & result2
+        #result = ad + dmi -> addmi
+        Response.write result
+        If result = "admin" Then
+            pw = "????????"
+        End if
+    End if
+%>
+
+<%
+    str = Request("str")
+
+    If not str = "" Then
+        result = Replace(str,"a","aad") 
+        #admin -> aaddmin
+        result = Replace(result,"i","in")
+        #aaddmin -> aaddminn
+        result1 = Mid(result,2,2)
+        #result 1 = ad
+        #????? => 2번째 index부터 반환해야 하는 거 아닌가?
+        result2 = Mid(result,4,6)
+        #result 2 = dmi
+        result = result1 & result2
+        #result = ad + dmi -> addmi
+        Response.write result
+        If result = "admin" Then
+        #거꾸로 result = admin 이 나오려면
+        #if) ad + min : result1 = ad, result2 = min
+        #  result1 = Mid(result,2,2) = ad : result = *ad*** ; a -> aad
+        #  result2 = Mid(result,4,6) = min : result = ***min*** ; mi -> min
+        #  result = ami
+            pw = "????????"
+        End if
+    End if
+%>
