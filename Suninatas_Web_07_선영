@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Game 07</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/static/img/game.ico" />
+    <script>
+        function noEvent() {
+            if (event.keyCode == 116 || event.keyCode == 9) {
+                alert('No!');
+                return false;
+            }
+            else if (event.ctrlKey && (event.keyCode = 78 || event.keyCode == 82)) {
+                return false;
+            }
+        }
+        document.onkeydown = noEvent;
+    </script>
+</head>
+<body onload="javascript:document.frn.wen07.focus();">
+    <form method="get" name="frn">
+        <div align="center">
+            <input type="text" name="wen07" value="Do U Like girls?">
+        </div>
+    </form>
+    <form method="post" action="./web07_1.asp" name="frm">
+        <div align="center">
+            <input type="button" name="main_btn" value="main" style="width: 60" onclick="location.href = '/'">&nbsp&nbsp&nbsp
+            <input type="button" name="main_btn" value="Back" style="width: 60" onclick="history.back()">
+        </div>
+        <div align="center">
+            <input type="hidden" name="web07" value="Do U Like girls?">
+        </div>
+        <div align="center">
+            <img src="./iu.gif" width="700" height="1000" name="iu">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div align="center">
+            <input type="submit" value="YES">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div align="center">
+            <img src="./yoona.gif" alt="yoona" width="700" height="1000">
+        </div>
+    </form>
+</body>
+
+<!-- Hint : Faster and Faster -->
+<!-- M@de by 2theT0P -->
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+처음 level7에 들어오자마자 볼 수 있었던것은 커다란 아이유와 윤아의 사진과 두 사진 사이에 있던 YES버튼 이었다.
+YES버튼을 눌러보니 Fail..Your too slow 라는 문구가 출력되었다. 
+f12에서 source창을 확인해 보니 Hint는 Faster and Faster라고만 되어 있었다.
+
+Hint위에 적혀있는 코드를 보면 
+ function noEvent() {
+            if (event.keyCode == 116 || event.keyCode == 9) {
+                alert('No!');
+                return false;
+            }
+            else if (event.ctrlKey && (event.keyCode = 78 || event.keyCode == 82)) {
+                return false;
+            }
+        }
+라고 되어있는 부분이 있는데 function이라고 되어 있으니 정확히 무었인지는 모르겠으나 함수인것 같고 안에 if-else if문 안에 내용을 살펴보면 event.keyCode가 116이거나 9이면 'No!'라고 알리고 false을 반환한다(?)
+if의 조건이 이나라면 event.ctrlkey와 event.keyCode가 78이거나 82의 조건을 만족하면 false반환(?)
+
+이 다음부터는 모르겠습니다...ㅠ
