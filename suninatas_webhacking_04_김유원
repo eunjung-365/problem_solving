@@ -1,0 +1,30 @@
+eval(function(p,a,c,k,e,r)
+{e=function(c)
+{return c.toString(a)};
+if(!''.replace(/^/,String))
+{while(c--)
+r[e(c)]=k[c]||e(c);
+k=[function(e)
+{return r[e]}];
+e=function()
+{return'\\w+'};c=1};
+
+while(c--)
+if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}
+
+('g l=m o(\'0\',\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'a\',\'b\',\'c\',\'d\',\'e\',\'f\');p
+q(n){g h=\'\';g 
+j=r;
+s(g i=t;i>0;)
+{i-=4;g k=(n>>i)&u;v(!j||k!=0){j=w;h+=l[k]}}
+x(h==\'\'?\'0\':h)}',34,34,'||||||||||||||||var|result||start|digit|digitArray|new||Array|function|PASS|true|for|32|0xf|if|false|return'.split('|'),0,{}))
+
+eval: 주어진 문자열을 코드로 해석하여 실행하는 함수로, 매우 주의하여 사용해야 합니다. 악성 코드가 포함될 수 있으며 보안 취약점을 만들 수 있습니다.
+첫 번째 문자열 'g l=m o(...)부터 끝까지가 실제로 압축된 코드의 본문입니다.
+p, a, c, k, e, r: 이러한 이름들은 압축 코드를 해석하기 위한 파라미터로 사용됩니다.
+l, m, o 등의 변수는 압축된 코드에서 임의로 사용된 이름으로, 본래의 의미를 가지고 있지는 않습니다.
+
+function(p,a,c,k,e,r) 함수가 선언
+패턴에서는 각 문자를 해석할 때, replace 등의 정규표현식을 사용하여 본래의 코드로 변환합니다.
+
+어렵다...
