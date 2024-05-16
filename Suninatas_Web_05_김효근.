@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Game 05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/static/img/game.ico" />
+</head>
+<body onload="init();">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form name="frm" method="post" action="./web05.asp">
+        <table width="250" cellpadding="0" cellspacing="0" align="center">
+            <tr height="30">
+                <td colspan="2" width="100%" class="table_top" align="right">
+                    <input type="button" name="main_btn" value="main" style="width: 60" onclick="location.href = '/'">&nbsp<input type="button" name="main_btn" value="Back" style="width: 60" onclick="history.back()"></td>
+            </tr>
+            <tr height="30" class="table_main">
+                <td width="200" align="center" bgcolor="cccccc"><font size="2"><input name="password" value="" style="width:180"></td>
+                <td width="50" align="center" bgcolor="cccccc" align="center">
+                    <button type="submit">Check</button></td>
+            </tr>
+            <tr height="30" class="table_top">
+                <td colspan="2">
+                    <script>
+							eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('g l=m o(\'0\',\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'a\',\'b\',\'c\',\'d\',\'e\',\'f\');p q(n){g h=\'\';g j=r;s(g i=t;i>0;){i-=4;g k=(n>>i)&u;v(!j||k!=0){j=w;h+=l[k]}}x(h==\'\'?\'0\':h)}',34,34,'||||||||||||||||var|result||start|digit|digitArray|new||Array|function|PASS|true|for|32|0xf|if|false|return'.split('|'),0,{}))		
+                    </script>
+                    <b>Check Key Value</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+	function init(){
+		document.frm.password.value = "";
+		document.frm.password.focus();
+	}
+
+</script>
+<!--Hint : 12342046413275659 -->
+<!-- M@de by 2theT0P -->
+
+
+//-----------------------------------------------------------------------------------------------
+var digitArray=new Array('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f');
+function PASS(n)
+{
+  var result='';
+  var start=true;
+  for(var i=32;i>0;)
+  {
+    i-=4;
+    var digit=(n>>i)&0xf;
+    if(!start||digit!=0)
+    {
+      start=false;result+=digitArray[digit]
+    }
+}
+
+return(result==''?'0':result)
+}
+
+# PASS() 가 없다
+#콘솔에 PASS(12342046413275659) 입력하면 '9c43c20c'가 출력된다
+#이를 비밀번호란에 넣고 Check를 누르면 'Authkey = 'Unp@cking j@vaScript'' 가 출력되며 게임이 끝난다
+
+
+
+
+
+
+
+
+
+
+
+		
