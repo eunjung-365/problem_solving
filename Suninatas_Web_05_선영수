@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Game 05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="/static/img/game.ico" />
+</head>
+<body onload="init();">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form name="frm" method="post" action="./web05.asp">
+        <table width="250" cellpadding="0" cellspacing="0" align="center">
+            <tr height="30">
+                <td colspan="2" width="100%" class="table_top" align="right">
+                    <input type="button" name="main_btn" value="main" style="width: 60" onclick="location.href = '/'">&nbsp<input type="button" name="main_btn" value="Back" style="width: 60" onclick="history.back()"></td>
+            </tr>
+            <tr height="30" class="table_main">
+                <td width="200" align="center" bgcolor="cccccc"><font size="2"><input name="password" value="" style="width:180"></td>
+                <td width="50" align="center" bgcolor="cccccc" align="center">
+                    <button type="submit">Check</button></td>
+            </tr>
+            <tr height="30" class="table_top">
+                <td colspan="2">
+                    <script>
+							eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('g l=m o(\'0\',\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'a\',\'b\',\'c\',\'d\',\'e\',\'f\');p q(n){g h=\'\';g j=r;s(g i=t;i>0;){i-=4;g k=(n>>i)&u;v(!j||k!=0){j=w;h+=l[k]}}x(h==\'\'?\'0\':h)}',34,34,'||||||||||||||||var|result||start|digit|digitArray|new||Array|function|PASS|true|for|32|0xf|if|false|return'.split('|'),0,{}))		
+                    </script>
+                    <b>Check Key Value</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+	function init(){
+		document.frm.password.value = "";
+		document.frm.password.focus();
+	}
+
+</script>
+<!--Hint : 12342046413275659 -->
+<!-- M@de by 2theT0P -->
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hint를 확인하면 12342046413275659임을 알 수 있었다.
+이 숫자들을 Check key value값에 넣었더니 아무일도 일어나지 않았다.
+그래서 F12를 눌러 console창에 입력을 해 보았더니 똑같이 var digitArray = new Array('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f');
+
+function PASS(n){
+    var result = '';
+    var start = true;
+    var digit;
+    for(var i=32; i>0;){
+        i -= 4;
+        digit = (n >> i) & 0xf;
+        if(!start || digit != 0){
+            start = false;
+            result += digitArray[digit];
+        }
+    }
+    return result == '' ? '0' : result;
+}이 나옴을 볼 수 있었다.
+
+GPT한테 코드 전문을 복사하어 언팩해달라고 하였더니 
+var digitArray = new Array('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f');
+
+function PASS(n){
+    var result = '';
+    var start = true;
+    var digit;
+    for(var i=32; i>0;){
+        i -= 4;
+        digit = (n >> i) & 0xf;
+        if(!start || digit != 0){
+            start = false;
+            result += digitArray[digit];
+        }
+    }
+    return result == '' ? '0' : result;
+}
+이와 같은 코드를 출력하였고, 이 스크립트는 'PASS'함수를 정의 하고 있다고 말하였다.
+다시 console 창에 PASS('12342046413275659'를 넣었더니 이상 '9c43c20c'이와 같은 코드가 출력되었다.
+다시 '9c43c20c' 이 코드를 입력창에 넣으면 'Unp@cking j@vaScript'이런 문자가 나오고 AUTH에 입력하면 문제가 풀린다.
+
